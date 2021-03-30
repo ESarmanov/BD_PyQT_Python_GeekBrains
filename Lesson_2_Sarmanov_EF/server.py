@@ -1,38 +1,39 @@
 """ серверная часть """
 import logging
 import select
-from lib.variables import MAX_CONNECTIONS, PRESENCE, ACTION, TIME, USER, ACCOUNT_NAME, RESPONSE, ERROR, AUTH, \
-    MSG, ERR200, ERR400, SERVER_TIMEOUT, SENDER, MSG_TEXT, RESPONSE_400, DESTINATION, EXIT, WHO, ERR_USER_ALREADY_EXIST
+from lib.variables import *
 from lib.utils import server_settings, create_socket, get_message, send_message
-from lib.descriptors import PortValidate
+from lib.descriptors import PortValidate, IPValidate
 from lib.metaclasses import ServerMaker
 
 SERVER_LOGGER = logging.getLogger('server')
 
+
 class Server(metaclass=ServerMaker):
-    srv_port=PortValidate()
+    srv_port = PortValidate()
+    srv_adr = IPValidate()
 
     def __init__(self, server_address, server_port):
         # ip адрес и порт для подключения
-        self.srv_adr=server_address
-        self.srv_port=server_port
+        self.srv_adr = server_address
+        self.srv_port = server_port
         # список клиентов
-        self.clients=[]
+        self.clients = []
         # список сообщений для отправки
-        self.messages=[]
+        self.messages = []
         # словарь связей имя_клиента:сокет
-        self.names=dict()
+        self.names = dict()
 
     def init_socket(self):
         transport = create_socket()
-        #transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        # transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         transport.bind((self.srv_adr, self.srv_port))
         transport.settimeout(SERVER_TIMEOUT)
         transport.listen(MAX_CONNECTIONS)
         print(f"server start on: {self.srv_adr}:{self.srv_port}")
         SERVER_LOGGER.info(f"server started on {self.srv_adr}:{self.srv_port}")
 
-        self.socket_transport=transport
+        self.socket_transport = transport
         self.socket_transport.listen()
 
     def main_loop(self):
@@ -40,7 +41,7 @@ class Server(metaclass=ServerMaker):
 
         while True:
             try:
-                client, client_address =  self.socket_transport.accept()
+                client, client_address = self.socket_transport.accept()
                 SERVER_LOGGER.debug(f'client | {client_address}')
             except OSError:
                 pass
@@ -106,14 +107,16 @@ class Server(metaclass=ServerMaker):
             # names[message[USER][ACCOUNT_NAME]] = client # пользователь гость, не добавляем в словарь пользователей
             send_message(client, {RESPONSE: 200, ERROR: ERR200, MSG: str(f"Welcome, {message[USER][ACCOUNT_NAME]}")})
             return
-        elif message[ACTION] == AUTH and USER in message and str(message[USER][ACCOUNT_NAME]).lower() != 'guest' :
+        elif message[ACTION] == AUTH and USER in message and str(message[USER][ACCOUNT_NAME]).lower() != 'guest':
             SERVER_LOGGER.info(f"Получено AUTH сообщение: {message}")
-            if str(message[USER][ACCOUNT_NAME]).lower() not in str(self.names.keys()).lower(): # нет такого, можно регать
+            if str(message[USER][ACCOUNT_NAME]).lower() not in str(
+                    self.names.keys()).lower():  # нет такого, можно регать
                 SERVER_LOGGER.info(f"сформировано AUTH сообщение: {message}. Пользователь занесен в список")
                 self.names[message[USER][ACCOUNT_NAME]] = client
                 # send_message(client, {RESPONSE: 200, ERROR: ERR200, MSG: str(f"Welcome, {message[USER][ACCOUNT_NAME]}")})
                 # send_message(client, RESPONSE_200)
-                send_message(client, {RESPONSE: 200, ERROR: ERR200, MSG: str(f"Welcome, {message[USER][ACCOUNT_NAME]}")})
+                send_message(client,
+                             {RESPONSE: 200, ERROR: ERR200, MSG: str(f"Welcome, {message[USER][ACCOUNT_NAME]}")})
                 return
             else:
                 SERVER_LOGGER.error(f"{ERR_USER_ALREADY_EXIST}: {message}")
@@ -128,14 +131,14 @@ class Server(metaclass=ServerMaker):
             # messages_list.append((message[ACCOUNT_NAME], message[MSG_TEXT]))
             self.messages.append((message))
             return
-        elif ACTION in message and message[ACTION]==WHO:
+        elif ACTION in message and message[ACTION] == WHO:
             SERVER_LOGGER.debug(f"сформировано WHO сообщение: {message}")
             # messages_list.append((message[ACCOUNT_NAME], message[MSG_TEXT]))
-            message[DESTINATION]=message[SENDER] # отправить список самому себе
-            all_names=''
+            message[DESTINATION] = message[SENDER]  # отправить список самому себе
+            all_names = ''
             for el in self.names:
-                all_names=all_names+' | '+ el
-            all_names=f"пользователи в сети:\n{all_names[3:]}"
+                all_names = all_names + ' | ' + el
+            all_names = f"пользователи в сети:\n{all_names[3:]}"
             message[MSG_TEXT] = all_names
             self.messages.append((message))
             return
@@ -154,16 +157,16 @@ class Server(metaclass=ServerMaker):
             response[ERROR] = 'Запрос некорректен.'
             send_message(client, response)
             return
+
     def start_server():
         srv_settings = server_settings()
         server_address = srv_settings[0]
         server_port = srv_settings[1]
         SERVER_LOGGER.debug(f"srv_settings:{server_address}:{server_port}")
-        server=Server(server_address, server_port)
-        #print(f"server start on: {server_address}:{server_port}")
+        server = Server(server_address, server_port)
+        # print(f"server start on: {server_address}:{server_port}")
         server.main_loop()
 
 
 if __name__ == '__main__':
     Server.start_server()
-

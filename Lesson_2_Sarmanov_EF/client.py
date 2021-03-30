@@ -6,14 +6,14 @@ import time
 import re
 import logging
 import threading
-from lib.variables import ACTION, PRESENCE, TIME, USER, ACCOUNT_NAME, RESPONSE, AUTH, ERR200, ERR400, \
-    SENDER, MSG, MSG_TEXT, ERROR, DESTINATION, EXIT, WHO
+from lib.variables import *
 from lib.utils import server_settings, get_message, send_message
 from lib.errors import ReqFieldMissingError, ServerError, IncorrectDataRecivedError
 from lib.metaclasses import ClientMaker
 import socket
 
 CLIENT_LOGGER = logging.getLogger('client')
+
 
 # Класс формировки и отправки сообщений на сервер и взаимодействия с пользователем.
 class ClientSender(threading.Thread, metaclass=ClientMaker):
@@ -30,9 +30,10 @@ class ClientSender(threading.Thread, metaclass=ClientMaker):
 
     def create_message(self):
         """Функция запрашивает текст сообщения и возвращает его."""
-        to_user=input('Кто получатель сообщения? ')
+        to_user = input('Кто получатель сообщения? ')
         message = input('Введите сообщение для отправки: ')
-        message_dict = {ACTION: MSG,TIME: time.time(),SENDER: self.account_name, DESTINATION:to_user,MSG_TEXT: message}
+        message_dict = {ACTION: MSG, TIME: time.time(), SENDER: self.account_name, DESTINATION: to_user,
+                        MSG_TEXT: message}
         CLIENT_LOGGER.debug(f'Сформирован словарь сообщения: {message_dict}')
         try:
             send_message(self.sock, message_dict)
@@ -42,7 +43,8 @@ class ClientSender(threading.Thread, metaclass=ClientMaker):
             sys.exit(1)
 
     def create_who_message(self):
-        message_dict = {ACTION: WHO,TIME: time.time(),SENDER: self.account_name, DESTINATION:self.account_name,MSG_TEXT: None}
+        message_dict = {ACTION: WHO, TIME: time.time(), SENDER: self.account_name, DESTINATION: self.account_name,
+                        MSG_TEXT: None}
         CLIENT_LOGGER.debug(f'Сформирован словарь сообщения: {message_dict}')
         try:
             send_message(self.sock, message_dict)
@@ -51,7 +53,7 @@ class ClientSender(threading.Thread, metaclass=ClientMaker):
             CLIENT_LOGGER.error('Потеряно соединение с сервером.')
             sys.exit(1)
 
-    #def user_interactive(self):
+    # def user_interactive(self):
     def run(self):
         """Функция взаимодействия с пользователем, запрашивает команды, отправляет сообщения"""
         # print_help()
@@ -91,27 +93,30 @@ class ClientReader(threading.Thread, metaclass=ClientMaker):
         self.sock = sock
         super().__init__()
 
-    #def message_from_server(self):
+    # def message_from_server(self):
     def run(self):
         """Функция - обработчик сообщений других пользователей, поступающих с сервера"""
         while True:
             try:
-                message=get_message(self.sock)
+                message = get_message(self.sock)
                 if ACTION in message and message[ACTION] == MSG and SENDER in message \
-                        and DESTINATION in message and MSG_TEXT in message and message[DESTINATION] == self.account_name:
+                        and DESTINATION in message and MSG_TEXT in message and message[
+                    DESTINATION] == self.account_name:
                     print(f'Получено сообщение от пользователя {message[SENDER]}:\n{message[MSG_TEXT]}')
                     CLIENT_LOGGER.info(f'Получено сообщение от пользователя {message[SENDER]}:\n{message[MSG_TEXT]}')
                 elif ACTION in message and message[ACTION] == WHO and SENDER in message \
-                        and DESTINATION in message and MSG_TEXT in message and message[DESTINATION] == self.account_name:
+                        and DESTINATION in message and MSG_TEXT in message and message[
+                    DESTINATION] == self.account_name:
                     print(f'Получено сообщение от пользователя {message[SENDER]}:\n{message[MSG_TEXT]}')
                     CLIENT_LOGGER.info(f'Получено сообщение от пользователя {message[SENDER]}:\n{message[MSG_TEXT]}')
                 else:
                     CLIENT_LOGGER.error(f'Получено некорректное сообщение с сервера: {message}')
             except IncorrectDataRecivedError:
                 CLIENT_LOGGER.error(f'Не удалось декодировать полученное сообщение.')
-            except (OSError, ConnectionError, ConnectionAbortedError,ConnectionResetError, json.JSONDecodeError):
+            except (OSError, ConnectionError, ConnectionAbortedError, ConnectionResetError, json.JSONDecodeError):
                 CLIENT_LOGGER.critical(f'Потеряно соединение с сервером.')
                 break
+
 
 def create_presence(account_name='Guest'):
     '''
@@ -124,6 +129,7 @@ def create_presence(account_name='Guest'):
     CLIENT_LOGGER.debug(f'Сформировано {PRESENCE} сообщение для пользователя {account_name}')
     return out
 
+
 def process_handler(message):
     '''
     Функция разбирает ответ сервера
@@ -132,10 +138,10 @@ def process_handler(message):
     '''
     CLIENT_LOGGER.debug(f'Разбор приветственного сообщения от сервера: {message}')
     if RESPONSE in message:
-        if message[RESPONSE]==200: #message[RESPONSE]==200:
+        if message[RESPONSE] == 200:  # message[RESPONSE]==200:
             CLIENT_LOGGER.debug(f"{message[RESPONSE]} содержит {ERR200}")
-            return message[MSG] #ERR200
-        elif message[RESPONSE]==ERR400: #message[RESPONSE]==400:
+            return message[MSG]  # ERR200
+        elif message[RESPONSE] == ERR400:  # message[RESPONSE]==400:
             CLIENT_LOGGER.debug(f"{message[RESPONSE]} содержит {ERR400}")
             raise ServerError(f"{ERR400}: {message[ERROR]}")
     raise ReqFieldMissingError(RESPONSE)
@@ -158,6 +164,7 @@ def get_user():
             break
     return account
 
+
 def create_action(account_name, action, msg=None):
     '''
     Функция отдает словарь с текстом сообщения
@@ -170,18 +177,19 @@ def create_action(account_name, action, msg=None):
     CLIENT_LOGGER.debug(f"{out}")
     return out
 
+
 def start_client():
     srv_settings = server_settings()
     server_address = srv_settings[0]
     server_port = srv_settings[1]
     client_listen = srv_settings[2]
-#    print(f"start client on: {server_address}:{server_port} | listen_mode={client_listen}")
-#    CLIENT_LOGGER.info(f"client started {server_address}:{server_port} | listen_mode={client_listen}")
+    #    print(f"start client on: {server_address}:{server_port} | listen_mode={client_listen}")
+    #    CLIENT_LOGGER.info(f"client started {server_address}:{server_port} | listen_mode={client_listen}")
     print(f"start client on: {server_address}:{server_port}")
     CLIENT_LOGGER.info(f"start client on: {server_address}:{server_port}")
 
     try:
-        #transport = create_socket()
+        # transport = create_socket()
         transport = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
         transport.connect((server_address, server_port))
@@ -190,10 +198,11 @@ def start_client():
         CLIENT_LOGGER.info(f"соединение с сервером {server_address}:{server_port}. Ответ: {answer}")
         print(f"соединение с сервером {server_address}:{server_port} \n {answer}")
 
-# авторизация
+        # авторизация
         account_name = get_user()
         CLIENT_LOGGER.info(f"Guest авторизовался как {account_name}")
-        CLIENT_LOGGER.debug(f"отправка {AUTH} сообщения на сервер {server_address}:{server_port} от user={account_name}")
+        CLIENT_LOGGER.debug(
+            f"отправка {AUTH} сообщения на сервер {server_address}:{server_port} от user={account_name}")
         message_to_server = create_action(account_name, action=AUTH, msg=None)
         send_message(transport, message_to_server)
         try:
@@ -222,13 +231,13 @@ def start_client():
         # Если соединение с сервером установлено корректно,
         # запускаем клиенский процесс приёма сообщний
         # print(f"клиент - в режиме client_listen={client_listen:}")
-        #receiver = threading.Thread(target=message_from_server, args=(transport, account_name))
+        # receiver = threading.Thread(target=message_from_server, args=(transport, account_name))
         receiver = ClientReader(account_name, transport)
         receiver.daemon = True
         receiver.start()
 
         # затем запускаем отправку сообщений и взаимодействие с пользователем.
-        #user_interface = threading.Thread(target=user_interactive, args=(transport, account_name))
+        # user_interface = threading.Thread(target=user_interactive, args=(transport, account_name))
         user_interface = ClientSender(account_name, transport)
         user_interface.daemon = True
         user_interface.start()
@@ -243,5 +252,7 @@ def start_client():
             if receiver.is_alive() and user_interface.is_alive():
                 continue
             break
+
+
 if __name__ == '__main__':
     start_client()

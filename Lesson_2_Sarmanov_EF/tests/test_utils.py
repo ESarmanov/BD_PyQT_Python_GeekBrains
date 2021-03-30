@@ -4,9 +4,11 @@ import sys
 import os
 import unittest
 import json
+
 sys.path.append(os.path.join(os.getcwd(), '..'))
 from lib.variables import *
 from lib.utils import *
+
 
 class TestSocket:
     '''
@@ -14,6 +16,7 @@ class TestSocket:
     при создании требует словарь, который будет прогонятся
     через тестовую функцию
     '''
+
     def __init__(self, test_dict):
         self.test_dict = test_dict
         self.encoded_message = None
@@ -42,12 +45,12 @@ class TestSocket:
         json_test_message = json.dumps(self.test_dict)
         return json_test_message.encode(ENCODING)
 
+
 class Tests(unittest.TestCase):
     ''' тестовый класс, собственно выполняющий тестирование '''
-    test_dict_send = {ACTION: PRESENCE,TIME: 2,USER: {ACCOUNT_NAME: 'NEW_USER'}}
+    test_dict_send = {ACTION: PRESENCE, TIME: 2, USER: {ACCOUNT_NAME: 'NEW_USER'}}
     test_dict_recv_ok = {RESPONSE: 200}
-    test_dict_recv_err = {RESPONSE: 400,ERROR: ERR400}
-
+    test_dict_recv_err = {RESPONSE: 400, ERROR: ERR400}
 
     def test_validate_ip_success(self):
         """ проверяет что в строке есть правильный IP адрес """
@@ -84,7 +87,6 @@ class Tests(unittest.TestCase):
     def test_server_settings_default(self):
         """ проверка запуска командной строки """
         self.assertEqual(server_settings(), [DEFAULT_IP, DEFAULT_PORT])
-
 
     def test_send_message(self):
         """

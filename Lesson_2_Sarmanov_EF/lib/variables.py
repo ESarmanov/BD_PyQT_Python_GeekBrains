@@ -16,7 +16,6 @@ ACCOUNT_NAME = 'account_name'
 SENDER = 'from'
 DESTINATION = 'to'
 
-
 # Прочие ключи, используемые в протоколе
 PRESENCE = 'presence'
 RESPONSE = 'response'
@@ -24,10 +23,10 @@ ERROR = 'error'
 AUTH = 'authenticate'
 ALERT = 'alert'
 MSG = 'msg'
-MSG_TEXT='msg_text'
-LISTEN = 'listen' # ключ для словаря, отправка от клиента запрос на прослушивание
+MSG_TEXT = 'msg_text'
+LISTEN = 'listen'  # ключ для словаря, отправка от клиента запрос на прослушивание
 EXIT = 'exit'
-WHO='who'
+WHO = 'who'
 
 CLIENT_LISTEN = False  # используется для определения, клиент пишет или слушает
 
@@ -36,10 +35,9 @@ ERR400 = '400:Bad request'
 ERR_USER_ALREADY_EXIST = 'Имя пользователя уже занято'
 
 RESPONSE_200 = {RESPONSE: 200}
-RESPONSE_400 = {RESPONSE: 400,ERROR: None}
+RESPONSE_400 = {RESPONSE: 400, ERROR: None}
 
 # настройка логирования
 LOG_LEVEL = logging.DEBUG
-#LOG_LEVEL = logging.INFO
+# LOG_LEVEL = logging.INFO
 LOG_FORMATTER = '%(asctime)s %(levelname)s %(filename)s %(message)s'
-

@@ -1,5 +1,6 @@
 import dis
 
+
 # Метакласс для проверки соответствия сервера:
 class ServerMaker(type):
     def __init__(self, clsname, bases, clsdict):
@@ -24,7 +25,7 @@ class ServerMaker(type):
             else:
                 # Раз функция разбираем код, получая используемые методы и атрибуты.
                 for res_el in res:
-                    #print(res_el)
+                    # print(res_el)
                     # opname - имя для операции
                     if res_el.opname == 'LOAD_GLOBAL':
                         if res_el.argval not in methods:
@@ -34,18 +35,19 @@ class ServerMaker(type):
                         if res_el.argval not in attributes:
                             # заполняем список атрибутами, использующимися в функциях класса
                             attributes.append(res_el.argval)
-        #print(f"attributes={attributes}")
-        #print(f"methods={methods}")
+        # print(f"attributes={attributes}")
+        # print(f"methods={methods}")
         # Если обнаружено использование недопустимого метода connect, бросаем исключение:
         if 'connect'.lower() in methods:
             raise TypeError("Серверный класс не может использовать метод 'connect'")
         # Если сокет не инициализировался функцией create_socket.
-#        if not ('SOCK_STREAM' in attributes and 'AF_INET' in attributes):
-#            raise TypeError('Некорректная инициализация сокета.')
+        #        if not ('SOCK_STREAM' in attributes and 'AF_INET' in attributes):
+        #            raise TypeError('Некорректная инициализация сокета.')
         if not ('socket_transport'.lower() in attributes and 'create_socket'.lower() in methods):
             raise TypeError('Некорректная инициализация сокета.')
         # Обязательно вызываем конструктор предка:
         super().__init__(clsname, bases, clsdict)
+
 
 # Метакласс для проверки корректности клиентов:
 class ClientMaker(type):

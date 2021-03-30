@@ -6,6 +6,7 @@ import sys
 from lib.errors import IncorrectDataRecivedError, NonDictInputError
 from lib.variables import PACKAGE_LENGTH, ENCODING, DEFAULT_PORT, DEFAULT_IP, MAX_CONNECTIONS, CLIENT_LISTEN
 
+
 def validate_ip(ip_str):
     """ Проверка что строка является действительным адресом IPv4.
     Возавращает True / False
@@ -23,6 +24,7 @@ def validate_ip(ip_str):
             return False
     return True
 
+
 def validate_port(ip_rort):
     """ Проверка что строка может являться разрешенным портом
     Возавращает True / False
@@ -30,8 +32,8 @@ def validate_port(ip_rort):
     :return:
     """
     try:
-        ip_port=int(ip_port)
-        if ip_port<1025 or ip_port>65535:
+        ip_port = int(ip_port)
+        if ip_port < 1025 or ip_port > 65535:
             return False
         else:
             return True
@@ -45,13 +47,13 @@ def server_settings():
     server.py -i(or -ip) 192.168.1.125 -p(or -port) 9999
     :return:
     '''
-    client_listen=CLIENT_LISTEN
+    client_listen = CLIENT_LISTEN
     try:
         # ищем в строке запуска тип клиента -l(listen) для клиентов, которые будут в роли "слушателя"
-        #print("-l", sys.argv)
+        # print("-l", sys.argv)
         if '-l' in sys.argv:
-            #print("client_listen=====True")
-            client_listen=True
+            # print("client_listen=====True")
+            client_listen = True
 
         # ищем в строке запуска ip
         if '-ip' in sys.argv:
@@ -60,8 +62,8 @@ def server_settings():
             server_address = sys.argv[sys.argv.index('-i') + 1]
         else:
             server_address = DEFAULT_IP
-        if not validate_ip(server_address) and server_address!='':
-            raise ValueError
+        # if not validate_ip(server_address) and server_address != '':
+        #    raise ValueError
 
         # ищем в строке запуска порт
         if '-p' in sys.argv:
@@ -70,7 +72,7 @@ def server_settings():
             server_port = int(sys.argv[sys.argv.index('-port') + 1])
         else:
             server_port = DEFAULT_PORT
-        #if not validate_port(server_port):
+        # if not validate_port(server_port):
         #    raise ValueError
 
     except ValueError:
@@ -78,9 +80,11 @@ def server_settings():
         sys.exit(1)
     return [server_address, server_port, client_listen]
 
+
 def create_socket():
     """ создаем сокет для соединения """
     return socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 
 def get_message(client):
     '''
@@ -91,15 +95,15 @@ def get_message(client):
     '''
 
     response_bytes = client.recv(PACKAGE_LENGTH)
-    #print(f"response_bytes={response_bytes}")
+    # print(f"response_bytes={response_bytes}")
     if isinstance(response_bytes, bytes):
         json_response = response_bytes.decode(ENCODING)
         response = json.loads(json_response)
-        #print(f"response={response}")
+        # print(f"response={response}")
         if isinstance(response, dict):
             return response
-        raise IncorrectDataRecivedError #ValueError
-    raise IncorrectDataRecivedError #ValueError
+        raise IncorrectDataRecivedError  # ValueError
+    raise IncorrectDataRecivedError  # ValueError
 
 
 def send_message(sock_obj, message):
