@@ -1,0 +1,11 @@
+2021-04-02 00:15:40,480 INFO client.py start client on: 127.0.0.1:7777
+2021-04-02 00:15:40,484 DEBUG client.py Сформировано presence сообщение для пользователя Guest
+2021-04-02 00:15:40,989 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200, 'error': '200:OK', 'msg': 'Welcome, Guest'}
+2021-04-02 00:15:40,989 DEBUG client.py 200 содержит 200:OK
+2021-04-02 00:15:40,989 INFO client.py соединение с сервером 127.0.0.1:7777. Ответ: Welcome, Guest
+2021-04-02 00:15:44,763 INFO client.py Guest авторизовался как Last1
+2021-04-02 00:15:44,764 DEBUG client.py отправка authenticate сообщения на сервер 127.0.0.1:7777 от user=Last1
+2021-04-02 00:15:44,764 DEBUG client.py Сформировано authenticate сообщение для пользователя Last1
+2021-04-02 00:15:44,764 DEBUG client.py {'action': 'authenticate', 'time': 1617304544.7645202, 'user': {'account_name': 'Last1'}, 'msg': None}
+2021-04-02 00:15:45,054 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 400, 'error': 'Имя пользователя уже занято'}
+2021-04-02 00:15:45,055 ERROR client.py в ответе сервера нет обязательного поля response

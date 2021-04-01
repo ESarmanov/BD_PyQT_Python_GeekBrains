@@ -1,0 +1,9 @@
+2021-04-02 00:17:22,454 INFO client.py start client on: 127.0.0.1:7777
+2021-04-02 00:17:22,456 DEBUG client.py Сформировано presence сообщение для пользователя Guest
+2021-04-02 00:17:22,961 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200, 'error': '200:OK', 'msg': 'Welcome, Guest'}
+2021-04-02 00:17:22,961 DEBUG client.py 200 содержит 200:OK
+2021-04-02 00:17:22,961 INFO client.py соединение с сервером 127.0.0.1:7777. Ответ: Welcome, Guest
+2021-04-02 00:17:29,998 INFO client.py Guest авторизовался как Last1
+2021-04-02 00:17:29,998 DEBUG client.py отправка authenticate сообщения на сервер 127.0.0.1:7777 от user=Last1
+2021-04-02 00:17:29,998 DEBUG client.py Сформировано authenticate сообщение для пользователя Last1
+2021-04-02 00:17:29,999 DEBUG client.py {'action': 'authenticate', 'time': 1617304649.9980903, 'user': {'account_name': 'Last1'}, 'msg': None}

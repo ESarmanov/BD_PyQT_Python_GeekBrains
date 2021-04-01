@@ -1,0 +1,62 @@
+2021-04-02 00:10:48,356 INFO server.py server start on:127.0.0.1:7777
+2021-04-02 00:10:48,356 INFO server.py connected to DB: Engine(sqlite:///server_db.db3)
+2021-04-02 00:10:48,356 INFO server.py server started on 127.0.0.1:7777
+2021-04-02 00:10:53,401 DEBUG server.py client | ('127.0.0.1', 49991)
+2021-04-02 00:10:53,401 INFO server.py установлено соединение с клиентом ('127.0.0.1', 49991)
+2021-04-02 00:10:53,401 DEBUG server.py функция разбора message от клиента: {'action': 'presence', 'time': 1617304253.4015603, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:10:53,401 DEBUG server.py сформировано PRESENCE сообщение:{'action': 'presence', 'time': 1617304253.4015603, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:11:05,696 DEBUG server.py функция разбора message от клиента: {'action': 'authenticate', 'time': 1617304265.431562, 'user': {'account_name': 'User_1'}, 'msg': None}
+2021-04-02 00:11:05,696 INFO server.py Получено AUTH сообщение: {'action': 'authenticate', 'time': 1617304265.431562, 'user': {'account_name': 'User_1'}, 'msg': None}
+2021-04-02 00:11:05,696 INFO server.py сформировано AUTH сообщение: {'action': 'authenticate', 'time': 1617304265.431562, 'user': {'account_name': 'User_1'}, 'msg': None}. Пользователь занесен в список
+2021-04-02 00:11:05,696 DEBUG server.py добавляем пользователя User_1 в БД <server_db.ServerStorage object at 0x0000029F99931040>
+2021-04-02 00:11:05,696 INFO server_db.py user login: User_1 127.0.0.1:49991
+2021-04-02 00:11:05,696 DEBUG server_db.py user_login result query:SELECT "All_Users".id AS "All_Users_id", "All_Users".login_name AS "All_Users_login_name", "All_Users".last_login AS "All_Users_last_login" 
+FROM "All_Users" 
+WHERE "All_Users".login_name = ?
+2021-04-02 00:11:05,702 INFO server_db.py new user, add to DB User_1 127.0.0.1:49991
+2021-04-02 00:11:10,021 DEBUG server.py client | ('127.0.0.1', 49992)
+2021-04-02 00:11:10,021 INFO server.py установлено соединение с клиентом ('127.0.0.1', 49992)
+2021-04-02 00:11:10,021 DEBUG server.py функция разбора message от клиента: {'action': 'presence', 'time': 1617304270.021434, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:11:10,021 DEBUG server.py сформировано PRESENCE сообщение:{'action': 'presence', 'time': 1617304270.021434, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:11:15,646 DEBUG server.py функция разбора message от клиента: {'action': 'authenticate', 'time': 1617304275.1866338, 'user': {'account_name': 'User_2'}, 'msg': None}
+2021-04-02 00:11:15,646 INFO server.py Получено AUTH сообщение: {'action': 'authenticate', 'time': 1617304275.1866338, 'user': {'account_name': 'User_2'}, 'msg': None}
+2021-04-02 00:11:15,646 INFO server.py сформировано AUTH сообщение: {'action': 'authenticate', 'time': 1617304275.1866338, 'user': {'account_name': 'User_2'}, 'msg': None}. Пользователь занесен в список
+2021-04-02 00:11:15,646 DEBUG server.py добавляем пользователя User_2 в БД <server_db.ServerStorage object at 0x0000029F99931040>
+2021-04-02 00:11:15,646 INFO server_db.py user login: User_2 127.0.0.1:49992
+2021-04-02 00:11:15,646 DEBUG server_db.py user_login result query:SELECT "All_Users".id AS "All_Users_id", "All_Users".login_name AS "All_Users_login_name", "All_Users".last_login AS "All_Users_last_login" 
+FROM "All_Users" 
+WHERE "All_Users".login_name = ?
+2021-04-02 00:11:15,646 INFO server_db.py new user, add to DB User_2 127.0.0.1:49992
+2021-04-02 00:12:04,796 DEBUG server.py функция разбора message от клиента: {'action': 'who', 'time': 1617304324.5363572, 'from': 'User_1', 'to': 'User_1', 'msg_text': None}
+2021-04-02 00:12:04,796 DEBUG server.py сформировано WHO сообщение: {'action': 'who', 'time': 1617304324.5363572, 'from': 'User_1', 'to': 'User_1', 'msg_text': None}
+2021-04-02 00:12:04,796 INFO server.py клиент ('127.0.0.1', 49991) отключился
+2021-04-02 00:12:26,316 DEBUG server.py функция разбора message от клиента: {'action': 'who', 'time': 1617304346.0566099, 'from': 'User_2', 'to': 'User_2', 'msg_text': None}
+2021-04-02 00:12:26,316 DEBUG server.py сформировано WHO сообщение: {'action': 'who', 'time': 1617304346.0566099, 'from': 'User_2', 'to': 'User_2', 'msg_text': None}
+2021-04-02 00:12:26,316 INFO server.py клиент ('127.0.0.1', 49992) отключился
+2021-04-02 00:13:45,566 DEBUG server.py client | ('127.0.0.1', 50000)
+2021-04-02 00:13:45,566 INFO server.py установлено соединение с клиентом ('127.0.0.1', 50000)
+2021-04-02 00:13:46,076 DEBUG server.py функция разбора message от клиента: {'action': 'presence', 'time': 1617304425.571079, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:13:46,076 DEBUG server.py сформировано PRESENCE сообщение:{'action': 'presence', 'time': 1617304425.571079, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:14:14,236 DEBUG server.py функция разбора message от клиента: {'action': 'authenticate', 'time': 1617304453.7661276, 'user': {'account_name': 'Last1'}, 'msg': None}
+2021-04-02 00:14:14,236 INFO server.py Получено AUTH сообщение: {'action': 'authenticate', 'time': 1617304453.7661276, 'user': {'account_name': 'Last1'}, 'msg': None}
+2021-04-02 00:14:14,236 INFO server.py сформировано AUTH сообщение: {'action': 'authenticate', 'time': 1617304453.7661276, 'user': {'account_name': 'Last1'}, 'msg': None}. Пользователь занесен в список
+2021-04-02 00:14:14,236 DEBUG server.py добавляем пользователя Last1 в БД <server_db.ServerStorage object at 0x0000029F99931040>
+2021-04-02 00:14:14,236 INFO server_db.py user login: Last1 127.0.0.1:50000
+2021-04-02 00:14:14,236 DEBUG server_db.py user_login result query:SELECT "All_Users".id AS "All_Users_id", "All_Users".login_name AS "All_Users_login_name", "All_Users".last_login AS "All_Users_last_login" 
+FROM "All_Users" 
+WHERE "All_Users".login_name = ?
+2021-04-02 00:14:14,236 INFO server.py клиент ('127.0.0.1', 50000) отключился
+2021-04-02 00:15:40,484 DEBUG server.py client | ('127.0.0.1', 50065)
+2021-04-02 00:15:40,484 INFO server.py установлено соединение с клиентом ('127.0.0.1', 50065)
+2021-04-02 00:15:40,988 DEBUG server.py функция разбора message от клиента: {'action': 'presence', 'time': 1617304540.484203, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:15:40,988 DEBUG server.py сформировано PRESENCE сообщение:{'action': 'presence', 'time': 1617304540.484203, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:15:45,054 DEBUG server.py функция разбора message от клиента: {'action': 'authenticate', 'time': 1617304544.7645202, 'user': {'account_name': 'Last1'}, 'msg': None}
+2021-04-02 00:15:45,054 INFO server.py Получено AUTH сообщение: {'action': 'authenticate', 'time': 1617304544.7645202, 'user': {'account_name': 'Last1'}, 'msg': None}
+2021-04-02 00:15:45,054 ERROR server.py Имя пользователя уже занято: {'action': 'authenticate', 'time': 1617304544.7645202, 'user': {'account_name': 'Last1'}, 'msg': None}
+2021-04-02 00:15:57,522 DEBUG server.py client | ('127.0.0.1', 50085)
+2021-04-02 00:15:57,522 INFO server.py установлено соединение с клиентом ('127.0.0.1', 50085)
+2021-04-02 00:15:58,026 DEBUG server.py функция разбора message от клиента: {'action': 'presence', 'time': 1617304557.5227616, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:15:58,026 DEBUG server.py сформировано PRESENCE сообщение:{'action': 'presence', 'time': 1617304557.5227616, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:16:02,096 DEBUG server.py функция разбора message от клиента: {'action': 'authenticate', 'time': 1617304561.7421653, 'user': {'account_name': 'Last1'}, 'msg': None}
+2021-04-02 00:16:02,096 INFO server.py Получено AUTH сообщение: {'action': 'authenticate', 'time': 1617304561.7421653, 'user': {'account_name': 'Last1'}, 'msg': None}
+2021-04-02 00:16:02,096 ERROR server.py Имя пользователя уже занято: {'action': 'authenticate', 'time': 1617304561.7421653, 'user': {'account_name': 'Last1'}, 'msg': None}

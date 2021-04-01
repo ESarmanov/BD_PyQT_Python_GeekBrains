@@ -1,0 +1,19 @@
+2021-04-02 00:10:53,401 INFO client.py start client on: 127.0.0.1:7777
+2021-04-02 00:10:53,401 DEBUG client.py Сформировано presence сообщение для пользователя Guest
+2021-04-02 00:10:53,406 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200, 'error': '200:OK', 'msg': 'Welcome, Guest'}
+2021-04-02 00:10:53,406 DEBUG client.py 200 содержит 200:OK
+2021-04-02 00:10:53,406 INFO client.py соединение с сервером 127.0.0.1:7777. Ответ: Welcome, Guest
+2021-04-02 00:11:05,431 INFO client.py Guest авторизовался как User_1
+2021-04-02 00:11:05,431 DEBUG client.py отправка authenticate сообщения на сервер 127.0.0.1:7777 от user=User_1
+2021-04-02 00:11:05,431 DEBUG client.py Сформировано authenticate сообщение для пользователя User_1
+2021-04-02 00:11:05,431 DEBUG client.py {'action': 'authenticate', 'time': 1617304265.431562, 'user': {'account_name': 'User_1'}, 'msg': None}
+2021-04-02 00:11:05,752 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200, 'error': '200:OK', 'msg': 'Welcome, User_1'}
+2021-04-02 00:11:05,752 DEBUG client.py 200 содержит 200:OK
+2021-04-02 00:11:05,756 DEBUG client.py Запущены процессы
+2021-04-02 00:12:04,536 DEBUG client.py запрос пользователей сервера
+2021-04-02 00:12:04,536 DEBUG client.py Сформирован словарь сообщения: {'action': 'who', 'time': 1617304324.5363572, 'from': 'User_1', 'to': 'User_1', 'msg_text': None}
+2021-04-02 00:12:04,536 INFO client.py запрошен список клиентов
+2021-04-02 00:12:16,032 DEBUG client.py запрос пользователей сервера
+2021-04-02 00:12:16,032 DEBUG client.py Сформирован словарь сообщения: {'action': 'who', 'time': 1617304336.032222, 'from': 'User_1', 'to': 'User_1', 'msg_text': None}
+2021-04-02 00:12:16,032 INFO client.py запрошен список клиентов
+2021-04-02 00:16:27,336 CRITICAL client.py Потеряно соединение с сервером.

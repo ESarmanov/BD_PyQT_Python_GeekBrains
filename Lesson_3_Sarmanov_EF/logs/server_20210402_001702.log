@@ -1,0 +1,16 @@
+2021-04-02 00:17:03,526 INFO server.py server start on:127.0.0.1:7777
+2021-04-02 00:17:03,526 INFO server.py connected to DB: Engine(sqlite:///server_db.db3)
+2021-04-02 00:17:03,526 INFO server.py server started on 127.0.0.1:7777
+2021-04-02 00:17:22,456 DEBUG server.py client | ('127.0.0.1', 50109)
+2021-04-02 00:17:22,456 INFO server.py установлено соединение с клиентом ('127.0.0.1', 50109)
+2021-04-02 00:17:22,961 DEBUG server.py функция разбора message от клиента: {'action': 'presence', 'time': 1617304642.4562247, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:17:22,961 DEBUG server.py сформировано PRESENCE сообщение:{'action': 'presence', 'time': 1617304642.4562247, 'user': {'account_name': 'Guest'}}
+2021-04-02 00:17:30,099 DEBUG server.py функция разбора message от клиента: {'action': 'authenticate', 'time': 1617304649.9980903, 'user': {'account_name': 'Last1'}, 'msg': None}
+2021-04-02 00:17:30,099 INFO server.py Получено AUTH сообщение: {'action': 'authenticate', 'time': 1617304649.9980903, 'user': {'account_name': 'Last1'}, 'msg': None}
+2021-04-02 00:17:30,099 INFO server.py сформировано AUTH сообщение: {'action': 'authenticate', 'time': 1617304649.9980903, 'user': {'account_name': 'Last1'}, 'msg': None}. Пользователь занесен в список
+2021-04-02 00:17:30,099 DEBUG server.py добавляем пользователя Last1 в БД <server_db.ServerStorage object at 0x00000263A3EEABE0>
+2021-04-02 00:17:30,099 INFO server_db.py user login: Last1 127.0.0.1:50109
+2021-04-02 00:17:30,101 DEBUG server_db.py user_login result query:SELECT "All_Users".id AS "All_Users_id", "All_Users".login_name AS "All_Users_login_name", "All_Users".last_login AS "All_Users_last_login" 
+FROM "All_Users" 
+WHERE "All_Users".login_name = ?
+2021-04-02 00:17:30,104 INFO server.py клиент ('127.0.0.1', 50109) отключился
