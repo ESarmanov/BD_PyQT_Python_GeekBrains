@@ -1,0 +1,479 @@
+2021-04-06 09:37:11,723 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 09:37:14,644 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 09:37:14,645 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 09:37:14,646 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 09:37:14,647 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1400, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60388), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617683834.6452277, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 09:37:15,228 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1400, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60388), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 09:37:15,228 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 09:37:15,230 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 09:37:15,230 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 09:37:15,263 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 09:37:15,265 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1400, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60388), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617683835.2634494, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 09:37:15,743 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1400, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60388), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 09:37:15,758 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 09:37:15,758 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617683835.7589087, 'user': 'AAA'}
+2021-04-06 09:37:15,760 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1400, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60388), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617683835.7589087, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 09:37:16,269 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1400, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60388), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 09:37:16,269 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 09:37:16,270 DEBUG client.py Запущены процессы
+2021-04-06 09:37:42,492 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1400, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60388), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617683862.4881094, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 09:37:42,492 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 09:37:43,488 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 09:47:48,883 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 09:47:53,144 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: QQQ
+2021-04-06 09:47:53,145 DEBUG client.py Сформировано presence сообщение для пользователя QQQ
+2021-04-06 09:47:53,146 DEBUG decoration_log.py Called function:__main__.create_presence:(('QQQ',), {}). Called from function: main
+2021-04-06 09:47:53,147 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60404), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617684473.1458218, 'user': {'account_name': 'QQQ'}}), {}). Called from function: main
+2021-04-06 09:47:53,718 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60404), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 09:47:53,718 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 09:47:53,719 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 09:47:53,720 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 09:47:53,771 DEBUG client.py Запрос списка известных пользователей QQQ
+2021-04-06 09:47:53,773 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60404), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617684473.7719188, 'account_name': 'QQQ'}), {}). Called from function: user_list_request
+2021-04-06 09:47:54,240 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60404), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 09:47:54,265 DEBUG client.py Запрос контакт листа для пользователся QQQ
+2021-04-06 09:47:54,265 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617684474.265117, 'user': 'QQQ'}
+2021-04-06 09:47:54,269 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60404), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617684474.265117, 'user': 'QQQ'}), {}). Called from function: contacts_list_request
+2021-04-06 09:47:54,764 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60404), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 09:47:54,764 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 09:47:54,765 DEBUG client.py Запущены процессы
+2021-04-06 09:48:14,962 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 09:48:17,077 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 09:48:17,078 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 09:48:17,079 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 09:48:17,081 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1244, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60407), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617684497.0789301, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 09:48:17,606 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1244, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60407), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 09:48:17,607 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 09:48:17,609 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 09:48:17,610 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 09:48:17,649 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 09:48:17,651 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1244, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60407), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617684497.6498995, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 09:48:18,122 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1244, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60407), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 09:48:18,139 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 09:48:18,139 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617684498.139389, 'user': 'AAA'}
+2021-04-06 09:48:18,141 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1244, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60407), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617684498.139389, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 09:48:18,638 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1244, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60407), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 09:48:18,639 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 09:48:18,640 DEBUG client.py Запущены процессы
+2021-04-06 09:48:35,788 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': 'AAA', 'to': 'QQQ', 'time': 1617684515.7885714, 'mess_text': 'DROM'}
+2021-04-06 09:48:36,773 INFO client.py Отправка сообщения пользователю: QQQ | {'action': 'message', 'from': 'AAA', 'to': 'QQQ', 'time': 1617684515.7885714, 'mess_text': 'DROM'}
+2021-04-06 09:48:36,775 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1244, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60407), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'from': 'AAA', 'to': 'QQQ', 'time': 1617684515.7885714, 'mess_text': 'DROM'}), {}). Called from function: create_message
+2021-04-06 09:48:37,065 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60404), raddr=('127.0.0.1', 7777)>,), {}). Called from function: run
+2021-04-06 09:48:37,081 INFO client.py Получено сообщение от пользователя AAA:
+DROM
+2021-04-06 09:48:41,695 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1244, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60407), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617684521.693145, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 09:48:41,695 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 09:48:42,179 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 09:48:49,162 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60404), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617684529.1610146, 'account_name': 'QQQ'}), {}). Called from function: run
+2021-04-06 09:48:49,162 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 09:48:50,174 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 09:57:15,049 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 09:57:17,544 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 09:57:17,566 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 09:57:17,567 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 09:57:17,568 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1168, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60421), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617685037.5663743, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 09:57:18,097 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1168, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60421), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 09:57:18,097 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 09:57:18,098 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 09:57:18,098 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 09:57:18,132 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 09:57:18,134 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1168, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60421), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617685038.1324415, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 09:57:18,609 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1168, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60421), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 09:57:18,631 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 09:57:18,631 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617685038.6318421, 'user': 'AAA'}
+2021-04-06 09:57:18,634 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1168, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60421), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617685038.6318421, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 09:57:19,122 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1168, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60421), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 09:57:19,122 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 09:57:19,123 DEBUG client.py Запущены процессы
+2021-04-06 09:57:45,707 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 09:57:50,422 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: BBB
+2021-04-06 09:57:50,423 DEBUG client.py Сформировано presence сообщение для пользователя BBB
+2021-04-06 09:57:50,424 DEBUG decoration_log.py Called function:__main__.create_presence:(('BBB',), {}). Called from function: main
+2021-04-06 09:57:50,426 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1204, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60423), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617685070.4231086, 'user': {'account_name': 'BBB'}}), {}). Called from function: main
+2021-04-06 09:57:50,992 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1204, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60423), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 09:57:50,992 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 09:57:50,993 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 09:57:50,993 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 09:57:51,025 DEBUG client.py Запрос списка известных пользователей BBB
+2021-04-06 09:57:51,027 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1204, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60423), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617685071.0258663, 'account_name': 'BBB'}), {}). Called from function: user_list_request
+2021-04-06 09:57:51,500 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1204, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60423), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 09:57:51,522 DEBUG client.py Запрос контакт листа для пользователся BBB
+2021-04-06 09:57:51,522 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617685071.5223436, 'user': 'BBB'}
+2021-04-06 09:57:51,524 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1204, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60423), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617685071.5223436, 'user': 'BBB'}), {}). Called from function: contacts_list_request
+2021-04-06 09:57:52,012 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1204, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60423), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 09:57:52,012 DEBUG client.py Получен ответ {'response': 202, 'data_list': ['AAA', 'CCC']}
+2021-04-06 09:57:52,079 DEBUG client.py Запущены процессы
+2021-04-06 09:58:09,683 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': 'BBB', 'to': 'AAA', 'time': 1617685089.6839662, 'mess_text': 'Йоу'}
+2021-04-06 09:58:10,230 INFO client.py Отправка сообщения пользователю: AAA | {'action': 'message', 'from': 'BBB', 'to': 'AAA', 'time': 1617685089.6839662, 'mess_text': 'Йоу'}
+2021-04-06 09:58:10,234 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1204, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60423), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'from': 'BBB', 'to': 'AAA', 'time': 1617685089.6839662, 'mess_text': 'Йоу'}), {}). Called from function: create_message
+2021-04-06 09:58:10,562 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1168, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60421), raddr=('127.0.0.1', 7777)>,), {}). Called from function: run
+2021-04-06 09:58:10,572 INFO client.py Получено сообщение от пользователя BBB:
+Йоу
+2021-04-06 09:58:43,911 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 09:58:46,907 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: XXX
+2021-04-06 09:58:46,933 DEBUG client.py Сформировано presence сообщение для пользователя XXX
+2021-04-06 09:58:46,934 DEBUG decoration_log.py Called function:__main__.create_presence:(('XXX',), {}). Called from function: main
+2021-04-06 09:58:46,934 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60425), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617685126.9336243, 'user': {'account_name': 'XXX'}}), {}). Called from function: main
+2021-04-06 09:58:47,476 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60425), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 09:58:47,477 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 09:58:47,478 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 09:58:47,478 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 09:58:47,539 DEBUG client.py Запрос списка известных пользователей XXX
+2021-04-06 09:58:47,541 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60425), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617685127.539867, 'account_name': 'XXX'}), {}). Called from function: user_list_request
+2021-04-06 09:58:47,993 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60425), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 09:58:48,020 DEBUG client.py Запрос контакт листа для пользователся XXX
+2021-04-06 09:58:48,021 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617685128.0214753, 'user': 'XXX'}
+2021-04-06 09:58:48,024 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60425), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617685128.0214753, 'user': 'XXX'}), {}). Called from function: contacts_list_request
+2021-04-06 09:58:48,503 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60425), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 09:58:48,504 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 09:58:48,505 DEBUG client.py Запущены процессы
+2021-04-06 09:59:16,793 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1204, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60423), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617685156.7929914, 'account_name': 'BBB'}), {}). Called from function: run
+2021-04-06 09:59:16,794 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 09:59:20,748 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60425), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617685160.7452695, 'account_name': 'XXX'}), {}). Called from function: run
+2021-04-06 09:59:20,749 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 09:59:21,752 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 09:59:23,199 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1168, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60421), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617685163.1974182, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 09:59:23,199 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:02:36,959 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:02:41,196 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: XXX
+2021-04-06 10:02:41,197 DEBUG client.py Сформировано presence сообщение для пользователя XXX
+2021-04-06 10:02:41,198 DEBUG decoration_log.py Called function:__main__.create_presence:(('XXX',), {}). Called from function: main
+2021-04-06 10:02:41,200 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60437), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617685361.1977453, 'user': {'account_name': 'XXX'}}), {}). Called from function: main
+2021-04-06 10:02:41,761 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60437), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:02:41,761 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:02:41,762 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:02:41,762 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:02:41,798 DEBUG client.py Запрос списка известных пользователей XXX
+2021-04-06 10:02:41,800 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60437), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617685361.7996862, 'account_name': 'XXX'}), {}). Called from function: user_list_request
+2021-04-06 10:02:42,277 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60437), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:02:42,293 DEBUG client.py Запрос контакт листа для пользователся XXX
+2021-04-06 10:02:42,294 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617685362.294041, 'user': 'XXX'}
+2021-04-06 10:02:42,298 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60437), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617685362.294041, 'user': 'XXX'}), {}). Called from function: contacts_list_request
+2021-04-06 10:02:42,789 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60437), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:02:42,789 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 10:02:42,790 DEBUG client.py Запущены процессы
+2021-04-06 10:03:07,003 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1268, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60437), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617685386.999988, 'account_name': 'XXX'}), {}). Called from function: run
+2021-04-06 10:03:07,003 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:03:08,003 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 10:05:38,082 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:05:40,169 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 10:05:40,169 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:05:40,171 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:05:40,172 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60443), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617685540.169828, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:05:40,753 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60443), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:05:40,754 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:05:40,755 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:05:40,755 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:05:40,793 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:05:40,795 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60443), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617685540.7937853, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:05:41,266 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60443), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:05:41,287 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:05:41,287 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617685541.2878869, 'user': 'AAA'}
+2021-04-06 10:05:41,289 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60443), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617685541.2878869, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:05:41,783 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60443), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:05:41,783 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 10:05:41,784 DEBUG client.py Запущены процессы
+2021-04-06 10:06:14,082 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1240, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60443), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617685574.0780897, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 10:06:14,082 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:06:15,085 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 10:08:55,059 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:08:57,443 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 10:08:57,444 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:08:57,445 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:08:57,447 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60447), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617685737.4445064, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:08:57,998 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60447), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:08:57,998 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:08:57,999 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:08:58,000 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:08:58,041 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:08:58,043 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60447), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617685738.0416894, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:08:58,513 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60447), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:08:58,529 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:08:58,529 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617685738.5291166, 'user': 'AAA'}
+2021-04-06 10:08:58,533 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60447), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617685738.5291166, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:08:59,024 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60447), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:08:59,025 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 10:08:59,025 DEBUG client.py Запущены процессы
+2021-04-06 10:09:35,331 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1428, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60447), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617685775.3274524, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 10:09:35,331 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:09:36,331 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 10:13:01,692 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:13:06,900 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 10:13:06,901 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:13:06,902 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:13:06,904 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1232, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60456), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617685986.9015665, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:13:07,467 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1232, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60456), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:13:07,467 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:13:07,468 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:13:07,468 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:13:07,501 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:13:07,503 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1232, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60456), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617685987.5019798, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:13:07,981 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1232, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60456), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:13:07,997 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:13:07,997 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617685987.9973888, 'user': 'AAA'}
+2021-04-06 10:13:08,001 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1232, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60456), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617685987.9973888, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:13:08,495 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1232, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60456), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:13:08,495 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 10:13:08,496 DEBUG client.py Запущены процессы
+2021-04-06 10:13:10,131 DEBUG client.py запрошена история сообшений
+2021-04-06 10:13:17,253 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1232, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60456), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617685997.2502658, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 10:13:17,254 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:13:17,710 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 10:13:23,370 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:13:25,816 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 10:13:25,817 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:13:25,820 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:13:25,821 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617686005.8179603, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:13:26,379 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:13:26,379 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:13:26,380 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:13:26,381 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:13:26,422 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:13:26,424 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617686006.4223468, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:13:26,894 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:13:26,909 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:13:26,910 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617686006.9106114, 'user': 'AAA'}
+2021-04-06 10:13:26,912 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617686006.9106114, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:13:27,404 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:13:27,404 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 10:13:27,405 DEBUG client.py Запущены процессы
+2021-04-06 10:13:49,591 DEBUG client.py Создание контакта XXX
+2021-04-06 10:13:49,593 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>, {'action': 'add', 'time': 1617686029.5917132, 'user': 'AAA', 'account_name': 'XXX'}), {}). Called from function: add_contact
+2021-04-06 10:13:49,916 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>,), {}). Called from function: add_contact
+2021-04-06 10:14:03,724 DEBUG client.py Создание контакта BBB
+2021-04-06 10:14:03,727 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>, {'action': 'add', 'time': 1617686043.724041, 'user': 'AAA', 'account_name': 'BBB'}), {}). Called from function: add_contact
+2021-04-06 10:14:04,237 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>,), {}). Called from function: add_contact
+2021-04-06 10:14:09,750 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=984, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60457), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617686049.7480395, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 10:14:09,750 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:14:10,759 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 10:18:14,292 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:18:16,551 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 10:18:16,551 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:18:16,553 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:18:16,554 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1188, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60461), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617686296.5518954, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:18:17,103 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1188, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60461), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:18:17,103 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:18:17,104 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:18:17,105 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:18:17,141 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:18:17,143 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1188, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60461), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617686297.142085, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:18:17,623 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1188, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60461), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:18:17,637 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:18:17,637 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617686297.6375263, 'user': 'AAA'}
+2021-04-06 10:18:17,641 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1188, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60461), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617686297.6375263, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:18:18,146 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1188, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60461), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:18:18,146 DEBUG client.py Получен ответ {'response': 202, 'data_list': ['XXX', 'BBB']}
+2021-04-06 10:18:18,176 DEBUG client.py Запущены процессы
+2021-04-06 10:18:21,401 DEBUG client.py запрошена история сообшений
+2021-04-06 10:18:30,487 DEBUG client.py запрошена история сообшений
+2021-04-06 10:18:46,406 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1188, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60461), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617686326.4028563, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 10:18:46,406 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:26:36,278 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:26:38,378 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 10:26:38,379 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:26:38,381 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:26:38,382 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1224, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60475), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617686798.379971, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:26:38,942 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1224, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60475), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:26:38,942 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:26:38,943 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:26:38,943 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:26:38,981 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:26:38,983 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1224, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60475), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617686798.9817421, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:26:39,457 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1224, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60475), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:26:39,467 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:26:39,467 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617686799.4676306, 'user': 'AAA'}
+2021-04-06 10:26:39,470 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1224, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60475), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617686799.4676306, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:26:39,973 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1224, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60475), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:26:39,973 DEBUG client.py Получен ответ {'response': 202, 'data_list': ['XXX', 'BBB']}
+2021-04-06 10:26:40,007 DEBUG client.py Запущены процессы
+2021-04-06 10:26:46,072 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1224, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60475), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617686806.0692115, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 10:26:46,073 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:28:18,847 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:28:21,661 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 10:28:21,662 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:28:21,664 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:28:21,665 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1344, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60479), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617686901.662247, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:28:22,225 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1344, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60479), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:28:22,225 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:28:22,226 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:28:22,226 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:28:22,259 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:28:22,261 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1344, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60479), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617686902.259126, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:28:22,740 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1344, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60479), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:28:22,766 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:28:22,766 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617686902.766384, 'user': 'AAA'}
+2021-04-06 10:28:22,770 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1344, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60479), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617686902.766384, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:28:23,253 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1344, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60479), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:28:37,703 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:28:48,279 INFO client.py Запущен клиент с парамертами: адрес сервера: 127.0.0.1 , порт: 7777, имя пользователя: AAA
+2021-04-06 10:28:48,280 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:28:48,282 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:28:48,283 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1124, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60480), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617686928.2801147, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:28:48,841 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1124, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60480), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:28:48,841 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:28:48,842 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:28:48,843 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:28:48,876 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:28:48,878 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1124, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60480), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617686928.8768578, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:28:49,351 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1124, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60480), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:28:49,366 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:28:49,367 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617686929.3666127, 'user': 'AAA'}
+2021-04-06 10:28:49,369 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1124, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60480), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617686929.3666127, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:28:49,862 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1124, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60480), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:28:49,862 DEBUG client.py Получен ответ {'response': 202, 'data_list': ['XXX', 'BBB']}
+2021-04-06 10:28:49,915 DEBUG client.py Запущены процессы
+2021-04-06 10:28:53,874 DEBUG client.py запрошена история сообшений
+2021-04-06 10:29:42,430 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1124, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60480), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617686982.4262428, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 10:29:42,430 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:46:14,789 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:46:17,248 ERROR client.py недопустимое имя пользователя: f
+2021-04-06 10:46:22,216 INFO client.py start client on: 127.0.0.1:7777 | имя пользователя: AAA
+2021-04-06 10:46:22,216 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:46:22,218 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:46:22,219 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1196, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60506), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617687982.2162783, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:46:22,772 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1196, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60506), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:46:22,772 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:46:22,774 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:46:22,774 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:46:22,842 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:46:22,844 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1196, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60506), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617687982.8423378, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:46:23,292 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1196, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60506), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:46:23,307 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:46:23,308 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617687983.3082705, 'user': 'AAA'}
+2021-04-06 10:46:23,311 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1196, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60506), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617687983.3082705, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:46:23,820 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1196, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60506), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:46:23,820 DEBUG client.py Получен ответ {'response': 202, 'data_list': ['XXX', 'BBB']}
+2021-04-06 10:46:23,890 DEBUG client.py запущен поток отправки сообщений
+2021-04-06 10:46:23,891 DEBUG client.py запущен поток приемки сообщений
+2021-04-06 10:46:36,010 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1196, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60506), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617687996.0066342, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 10:46:36,010 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:46:37,020 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 10:47:24,842 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:47:27,711 INFO client.py недопустимое имя пользователя: as
+2021-04-06 10:47:29,898 INFO client.py недопустимое имя пользователя: E
+2021-04-06 10:47:32,094 INFO client.py start client on: 127.0.0.1:7777 | имя пользователя: AAA
+2021-04-06 10:47:32,095 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:47:32,096 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:47:32,097 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1212, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60509), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617688052.0954096, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:47:32,661 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1212, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60509), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:47:32,661 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:47:32,662 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:47:32,662 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:47:32,698 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:47:32,700 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1212, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60509), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617688052.698873, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:47:33,170 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1212, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60509), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:47:33,195 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:47:33,195 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617688053.1953833, 'user': 'AAA'}
+2021-04-06 10:47:33,199 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1212, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60509), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617688053.1953833, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:47:33,692 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1212, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60509), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:47:33,692 DEBUG client.py Получен ответ {'response': 202, 'data_list': ['XXX', 'BBB']}
+2021-04-06 10:47:33,755 DEBUG client.py запущен поток отправки сообщений
+2021-04-06 10:47:33,755 DEBUG client.py запущен поток приемки сообщений
+2021-04-06 10:47:36,662 DEBUG client.py запрошена история сообшений
+2021-04-06 10:47:39,818 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1212, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60509), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617688059.810072, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 10:47:39,818 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:47:40,817 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 10:51:02,821 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:51:02,828 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:51:02,829 INFO client.py start client on: 127.0.0.1:7777 | имя пользователя: AAA
+2021-04-06 10:51:02,866 DEBUG decoration_log.py Called function:__main__.arg_parser:((), {}). Called from function: main
+2021-04-06 10:51:02,867 INFO client.py start client on: 127.0.0.1:7777 | имя пользователя: BBB
+2021-04-06 10:51:02,900 DEBUG decoration_log.py Called function:__main__.arg_parser:(('7777', ''), {}). Called from function: start_server
+2021-04-06 10:51:03,343 DEBUG client.py Сформировано presence сообщение для пользователя AAA
+2021-04-06 10:51:03,344 DEBUG decoration_log.py Called function:__main__.create_presence:(('AAA',), {}). Called from function: main
+2021-04-06 10:51:03,345 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60517), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617688263.3430183, 'user': {'account_name': 'AAA'}}), {}). Called from function: main
+2021-04-06 10:51:03,374 DEBUG client.py Сформировано presence сообщение для пользователя BBB
+2021-04-06 10:51:03,375 DEBUG decoration_log.py Called function:__main__.create_presence:(('BBB',), {}). Called from function: main
+2021-04-06 10:51:03,376 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1256, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60518), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617688263.374999, 'user': {'account_name': 'BBB'}}), {}). Called from function: main
+2021-04-06 10:51:03,435 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60517)>,), {}). Called from function: run
+2021-04-06 10:51:03,502 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60517), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:51:03,502 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:51:03,503 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60517)>, {'response': 200}), {}). Called from function: process_client_message
+2021-04-06 10:51:03,504 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:51:03,504 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:51:03,508 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1228, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60518)>,), {}). Called from function: run
+2021-04-06 10:51:03,521 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1256, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60518), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:51:03,522 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:51:03,523 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1228, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60518)>, {'response': 200}), {}). Called from function: process_client_message
+2021-04-06 10:51:03,523 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:51:03,523 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:51:03,567 DEBUG client.py Запрос списка известных пользователей AAA
+2021-04-06 10:51:03,570 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60517), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617688263.5678804, 'account_name': 'AAA'}), {}). Called from function: user_list_request
+2021-04-06 10:51:03,579 DEBUG client.py Запрос списка известных пользователей BBB
+2021-04-06 10:51:03,581 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1256, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60518), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617688263.5798736, 'account_name': 'BBB'}), {}). Called from function: user_list_request
+2021-04-06 10:51:04,035 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60517)>,), {}). Called from function: run
+2021-04-06 10:51:04,039 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60517), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:51:04,040 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60517)>, {'response': 202, 'data_list': ['AAA', 'BBB', 'CCC', 'QQQ', 'XXX']}), {}). Called from function: process_client_message
+2021-04-06 10:51:04,041 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1228, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60518)>,), {}). Called from function: run
+2021-04-06 10:51:04,044 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1256, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60518), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:51:04,044 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1228, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60518)>, {'response': 202, 'data_list': ['AAA', 'BBB', 'CCC', 'QQQ', 'XXX']}), {}). Called from function: process_client_message
+2021-04-06 10:51:04,050 DEBUG client.py Запрос контакт листа для пользователся AAA
+2021-04-06 10:51:04,050 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617688264.0503347, 'user': 'AAA'}
+2021-04-06 10:51:04,052 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60517), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617688264.0503347, 'user': 'AAA'}), {}). Called from function: contacts_list_request
+2021-04-06 10:51:04,055 DEBUG client.py Запрос контакт листа для пользователся BBB
+2021-04-06 10:51:04,055 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617688264.0553312, 'user': 'BBB'}
+2021-04-06 10:51:04,057 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1256, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60518), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617688264.0553312, 'user': 'BBB'}), {}). Called from function: contacts_list_request
+2021-04-06 10:51:04,548 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60517)>,), {}). Called from function: run
+2021-04-06 10:51:04,557 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60517), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:51:04,557 DEBUG client.py Получен ответ {'response': 202, 'data_list': ['XXX', 'BBB']}
+2021-04-06 10:51:04,558 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60517)>, {'response': 202, 'data_list': ['XXX', 'BBB']}), {}). Called from function: process_client_message
+2021-04-06 10:51:04,560 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1228, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60518)>,), {}). Called from function: run
+2021-04-06 10:51:04,567 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1228, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60518)>, {'response': 202, 'data_list': ['AAA', 'CCC']}), {}). Called from function: process_client_message
+2021-04-06 10:51:04,567 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1256, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60518), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:51:04,567 DEBUG client.py Получен ответ {'response': 202, 'data_list': ['AAA', 'CCC']}
+2021-04-06 10:51:04,593 DEBUG client.py запущен поток отправки сообщений
+2021-04-06 10:51:04,594 DEBUG client.py запущен поток приемки сообщений
+2021-04-06 10:51:04,620 DEBUG client.py запущен поток отправки сообщений
+2021-04-06 10:51:04,621 DEBUG client.py запущен поток приемки сообщений
+2021-04-06 10:51:43,129 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': 'BBB', 'to': 'AAA', 'time': 1617688303.1298518, 'mess_text': 'test message to AAA'}
+2021-04-06 10:51:43,136 INFO client.py Отправка сообщения пользователю: AAA | {'action': 'message', 'from': 'BBB', 'to': 'AAA', 'time': 1617688303.1298518, 'mess_text': 'test message to AAA'}
+2021-04-06 10:51:43,139 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1256, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60518), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'from': 'BBB', 'to': 'AAA', 'time': 1617688303.1298518, 'mess_text': 'test message to AAA'}), {}). Called from function: create_message
+2021-04-06 10:51:43,334 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1228, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60518)>,), {}). Called from function: run
+2021-04-06 10:51:43,354 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60517)>, {'action': 'message', 'from': 'BBB', 'to': 'AAA', 'time': 1617688303.1298518, 'mess_text': 'test message to AAA'}), {}). Called from function: process_message
+2021-04-06 10:51:43,920 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60517), raddr=('127.0.0.1', 7777)>,), {}). Called from function: run
+2021-04-06 10:51:43,936 INFO client.py Получено сообщение от BBB | test message to AAA
+2021-04-06 10:51:56,225 DEBUG client.py запрошена история сообшений
+2021-04-06 10:52:22,260 DEBUG client.py Создание контакта CCC
+2021-04-06 10:52:22,263 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60517), raddr=('127.0.0.1', 7777)>, {'action': 'add', 'time': 1617688342.2600799, 'user': 'AAA', 'account_name': 'CCC'}), {}). Called from function: add_contact
+2021-04-06 10:52:22,729 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60517)>,), {}). Called from function: run
+2021-04-06 10:52:22,745 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60517)>, {'response': 200}), {}). Called from function: process_client_message
+2021-04-06 10:52:22,746 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60517), raddr=('127.0.0.1', 7777)>,), {}). Called from function: add_contact
+2021-04-06 10:52:53,419 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1092, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60517), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617688373.417025, 'account_name': 'AAA'}), {}). Called from function: run
+2021-04-06 10:52:53,419 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:52:53,801 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60517)>,), {}). Called from function: run
+2021-04-06 10:52:53,827 CRITICAL client.py Потеряно соединение с сервером.
+2021-04-06 10:52:55,604 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1256, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60518), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617688375.6023266, 'account_name': 'BBB'}), {}). Called from function: run
+2021-04-06 10:52:55,604 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:52:55,859 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1228, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60518)>,), {}). Called from function: run
+2021-04-06 10:53:00,497 INFO client.py start client on: 127.0.0.1:7777 | имя пользователя: RRR
+2021-04-06 10:53:00,498 DEBUG client.py Сформировано presence сообщение для пользователя RRR
+2021-04-06 10:53:00,499 DEBUG decoration_log.py Called function:__main__.create_presence:(('RRR',), {}). Called from function: main
+2021-04-06 10:53:00,500 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1088, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60522), raddr=('127.0.0.1', 7777)>, {'action': 'presence', 'time': 1617688380.4980817, 'user': {'account_name': 'RRR'}}), {}). Called from function: main
+2021-04-06 10:53:01,007 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60522)>,), {}). Called from function: run
+2021-04-06 10:53:01,077 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1088, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60522), raddr=('127.0.0.1', 7777)>,), {}). Called from function: main
+2021-04-06 10:53:01,078 DEBUG client.py Разбор приветственного сообщения от сервера: {'response': 200}
+2021-04-06 10:53:01,078 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60522)>, {'response': 200}), {}). Called from function: process_client_message
+2021-04-06 10:53:01,079 DEBUG decoration_log.py Called function:__main__.process_response_ans:(({'response': 200},), {}). Called from function: main
+2021-04-06 10:53:01,079 INFO client.py Установлено соединение с сервером. Ответ сервера: 200 : OK
+2021-04-06 10:53:01,138 DEBUG client.py Запрос списка известных пользователей RRR
+2021-04-06 10:53:01,140 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1088, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60522), raddr=('127.0.0.1', 7777)>, {'action': 'get_users', 'time': 1617688381.1387715, 'account_name': 'RRR'}), {}). Called from function: user_list_request
+2021-04-06 10:53:01,595 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60522)>,), {}). Called from function: run
+2021-04-06 10:53:01,599 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1088, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60522), raddr=('127.0.0.1', 7777)>,), {}). Called from function: user_list_request
+2021-04-06 10:53:01,599 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60522)>, {'response': 202, 'data_list': ['AAA', 'BBB', 'CCC', 'QQQ', 'XXX', 'RRR']}), {}). Called from function: process_client_message
+2021-04-06 10:53:01,622 DEBUG client.py Запрос контакт листа для пользователся RRR
+2021-04-06 10:53:01,622 DEBUG client.py Сформирован запрос {'action': 'get_contacts', 'time': 1617688381.6225262, 'user': 'RRR'}
+2021-04-06 10:53:01,625 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1088, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60522), raddr=('127.0.0.1', 7777)>, {'action': 'get_contacts', 'time': 1617688381.6225262, 'user': 'RRR'}), {}). Called from function: contacts_list_request
+2021-04-06 10:53:02,107 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60522)>,), {}). Called from function: run
+2021-04-06 10:53:02,111 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1088, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60522), raddr=('127.0.0.1', 7777)>,), {}). Called from function: contacts_list_request
+2021-04-06 10:53:02,111 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60522)>, {'response': 202, 'data_list': []}), {}). Called from function: process_client_message
+2021-04-06 10:53:02,112 DEBUG client.py Получен ответ {'response': 202, 'data_list': []}
+2021-04-06 10:53:02,112 DEBUG client.py запущен поток отправки сообщений
+2021-04-06 10:53:02,113 DEBUG client.py запущен поток приемки сообщений
+2021-04-06 10:53:08,163 DEBUG client.py запрошена история сообшений
+2021-04-06 10:53:15,279 DEBUG client.py Сформирован словарь сообщения: {'action': 'message', 'from': 'RRR', 'to': 'AAA', 'time': 1617688395.2794485, 'mess_text': 'Q'}
+2021-04-06 10:53:16,228 INFO client.py Отправка сообщения пользователю: AAA | {'action': 'message', 'from': 'RRR', 'to': 'AAA', 'time': 1617688395.2794485, 'mess_text': 'Q'}
+2021-04-06 10:53:16,230 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1088, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60522), raddr=('127.0.0.1', 7777)>, {'action': 'message', 'from': 'RRR', 'to': 'AAA', 'time': 1617688395.2794485, 'mess_text': 'Q'}), {}). Called from function: create_message
+2021-04-06 10:53:16,404 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60522)>,), {}). Called from function: run
+2021-04-06 10:53:18,244 DEBUG decoration_log.py Called function:lib.utils.send_message:((<socket.socket fd=1088, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 60522), raddr=('127.0.0.1', 7777)>, {'action': 'exit', 'time': 1617688398.243025, 'account_name': 'RRR'}), {}). Called from function: run
+2021-04-06 10:53:18,244 INFO client.py Завершение работы по команде пользователя.
+2021-04-06 10:53:18,447 DEBUG decoration_log.py Called function:lib.utils.get_message:((<socket.socket fd=1288, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60522)>,), {}). Called from function: run
